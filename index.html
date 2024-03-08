@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>What's for dinner?</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">What's for dinner?</a></h1>
+    </header>
+
+    <main>
+      <h2>Search for delicious recipes:</h2>
+      <div id="search">
+        <section id="searchBox">
+          <fieldset>
+            <legend>Search</legend>
+            <div>
+              <label>Search: </label>
+              <input id="searchInput" placeholder="Search Recipe" type="text" />
+              <input id="button" type="button" value="Search" />
+            </div>
+          </fieldset>
+        </section>
+        <section id="searchHistory" style="display: none"></section>
+      </div>
+
+      <h2 id="searchResult" style="display: none"></h2>
+      <section id="result">
+        <div id="chart" style="display: none">
+          <canvas id="myChart"></canvas>
+        </div>
+        <section id="searchRecipeResult"></section>
+      </section>
+
+      <h2>Want inspiration? Check out these categories:</h2>
+
+      <section id="recipeSuggestions"></section>
+    </main>
+
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

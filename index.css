@@ -1,0 +1,249 @@
+/* ====================================================================================================================== */
+/* Typsnitt och färgvariabler ------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: Open-Sans;
+  src: url('OpenSans-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Yeseva;
+  src: url('Yeseva.ttf') format('truetype');
+}
+
+:root {
+  --background-color: #b96f43;
+  --background-color-dark: #965a36;
+  --main-text-color: #000000;
+  --light-color: #fcfcfc88;
+  --alternative-color: #7fb069;
+  --alternative-color-dark: #658a53;
+}
+
+/* ====================================================================================================================== */
+/* Allmän stilsättning -------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+a {
+  color: var(--main-text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  background-image: url('background.png');
+  font-family: Open-Sans, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: Yeseva, serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: Yeseva, serif;
+  text-align: center;
+  margin: 2em auto 0.25em;
+}
+
+h3 {
+  font-family: Yeseva, serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====================================================================================================================== */
+/* Header --------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+header {
+  background-color: var(--light-color);
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+  padding: 0.5em 2em;
+}
+
+/* ====================================================================================================================== */
+/* Sökruta och sökhistorik ---------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+#search {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+#checkboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+span {
+  margin: 0.25em 0.5em;
+}
+
+#searchInput {
+  margin: 1.5em 0;
+}
+
+#searchBox,
+#searchHistory {
+  align-items: center;
+  background-color: var(--light-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+#searchHistory {
+  max-width: 30vw;
+}
+
+#searchHistory li {
+  list-style-type: none;
+}
+
+#searchBox {
+  width: 60vw;
+}
+
+/* ====================================================================================================================== */
+/* Sökresultat ---------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+#result {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em auto;
+  max-width: 90vw;
+}
+
+#result > div {
+  background-color: var(--light-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+  width: 40vw;
+}
+
+#searchRecipeResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#searchRecipeResult ul {
+  width: 40vw;
+}
+
+/* ====================================================================================================================== */
+/* De slumpade kategorierna för receptförslag --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+.recipeList {
+  background-color: var(--alternative-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+  margin: 0 1em 1em;
+  padding: 1em;
+}
+
+.recipeList li,
+#searchRecipeResult li {
+  background-color: var(--light-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+#searchRecipeResult li {
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+}
+
+.recipeList li {
+  box-shadow: 2px 2px 4px var(--alternative-color-dark);
+}
+
+li > img {
+  width: 7em;
+  padding-right: 1em;
+}
+
+#recipeSuggestions {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+#recipeSuggestions li {
+  max-width: 25vw;
+}
+
+/* ====================================================================================================================== */
+/* Footer --------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+footer {
+  background-color: var(--background-color-dark);
+  height: 20vh;
+}
+
+/* ====================================================================================================================== */
+/* Media querries ------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 930px) {
+  #search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchHistory {
+    min-width: 80vw;
+  }
+
+  #searchBox {
+    min-width: 80vw;
+  }
+
+  #result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #chart {
+    align-items: center;
+    margin: 1em;
+    width: 80vw;
+  }
+
+  #searchRecipeResult > ul {
+    margin: 1em;
+    justify-content: center;
+    width: 80vw;
+  }
+
+  .recipeList li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipeList > img {
+    width: 100%;
+    padding-right: 0;
+  }
+}

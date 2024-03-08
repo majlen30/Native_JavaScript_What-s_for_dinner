@@ -1,0 +1,85 @@
+/* ====================================================================================================================== */
+/* Färgvariabler -------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+:root {
+  --main-text-color: #000000;
+  --light-color: #fcfcfc88;
+  --background-color: #b96f43;
+  --background-color-dark: #965a36;
+  --alternative-color: #7fb069;
+  --alternative-color-dark: #658a53;
+}
+
+/* ====================================================================================================================== */
+/* Stilsättning för receptet -------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+#recipe {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  background-color: var(--alternative-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--background-color-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3em;
+  padding: 3em;
+  width: 60vw;
+}
+
+div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--alternative-color-dark);
+  border: solid var(--light-color) 10px;
+  margin-bottom: 1em;
+  max-width: 20vw;
+}
+
+h2 {
+  margin: 1em auto;
+}
+
+h3 {
+  margin: 1.5em 0 0;
+}
+
+ul {
+  border: solid var(--light-color) 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--alternative-color-dark);
+}
+
+li {
+  background-color: var(--light-color);
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+}
+
+p {
+  margin-top: 0.5em;
+}
+
+/* ====================================================================================================================== */
+/* Media querries ------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  div {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  img {
+    max-width: 90%;
+    margin: auto;
+  }
+}
